@@ -1,4 +1,6 @@
 # pro-go-sdk
+
+
 ##SDK Features
 
 ## 1. Client
@@ -36,11 +38,20 @@ err:= Cancel(client,orderId,pair)
 ```
 
 
-## 4. Cancel
+## 4. List user's orders
 
 Call example
 
 ```
-err:= Cancel(client,orderId,pair)
+params := []string{"usdt_thb", "open", "buy", fmt.Sprintf("%d", offset)} // array of string
+orders, err := List(client, params...)
+```
+
+## 5. List book orders
+
+Call example
+
+```
+bids, asks, err := ListOrdersBook(tt.args.c, tt.args.pairing)
 ```
 
