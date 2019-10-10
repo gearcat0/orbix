@@ -1,7 +1,7 @@
 # pro-go-sdk
 
 
-##SDK Features
+## SDK Features
 
 ## 1. Client
 ```
@@ -53,5 +53,11 @@ Call example
 
 ```
 bids, asks, err := ListOrdersBook(client, "btc_thb")
+```
+
+## 6 Get user account
+
+```
+userAccount, err := Get(client)
 ```
 
