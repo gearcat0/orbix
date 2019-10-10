@@ -43,7 +43,7 @@ err:= Cancel(client,orderId,pair)
 Call example
 
 ```
-params := []string{"usdt_thb", "open", "buy", fmt.Sprintf("%d", offset)} // array of string
+params := []string{"btc_thb", "open", "buy", fmt.Sprintf("%d", offset)} // array of string
 orders, err := List(client, params...)
 ```
 
@@ -52,6 +52,6 @@ orders, err := List(client, params...)
 Call example
 
 ```
-bids, asks, err := ListOrdersBook(tt.args.c, tt.args.pairing)
+bids, asks, err := ListOrdersBook(client, "btc_thb")
 ```
 
