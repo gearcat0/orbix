@@ -1,4 +1,4 @@
-package github.com/gearcat0/orbix-sdk/client
+package github.com/gearcat0/orbix
 
 
 type Client struct {
