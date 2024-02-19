@@ -1,6 +1,6 @@
-module pro-go-sdk
+module github.com/gearcat0/orbix-sdk
 
-go 1.13
+go 1.20
 
 require (
 	github.com/sirupsen/logrus v1.4.2
