@@ -1,3 +1,3 @@
-module github.com/gearcat0/orbix-sdk/signature
+module github.com/gearcat0/orbix/signature
 
 go 1.20

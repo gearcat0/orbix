@@ -1,4 +1,4 @@
-module github.com/gearcat0/orbix-sdk
+module github.com/gearcat0/orbix
 
 go 1.20
 
