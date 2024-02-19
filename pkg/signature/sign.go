@@ -1,4 +1,4 @@
-package signature
+package github.com/gearcat0/orbix-sdk/signature
 
 import (
 	"encoding/hex"

@@ -1,4 +1,4 @@
-package user
+package github.com/gearcat0/orbix-sdk/user
 
 
 import (

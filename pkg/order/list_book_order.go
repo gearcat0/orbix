@@ -1,4 +1,4 @@
-package order
+package github.com/gearcat0/orbix-sdk/order
 
 import (
 	"encoding/json"
