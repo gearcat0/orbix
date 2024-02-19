@@ -1,3 +1,3 @@
-module github.com/gearcat0/orbix/client
+module orbix/client
 
 go 1.20
