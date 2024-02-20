@@ -1,4 +1,4 @@
-package github.com/gearcat0/orbix-sdk/xsig
+package xsig
 
 
 import (

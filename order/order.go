@@ -1,4 +1,4 @@
-package github.com/gearcat0/orbix-sdk/order
+package order
 
 
 type Order struct {

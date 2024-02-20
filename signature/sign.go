@@ -1,8 +1,8 @@
-package github.com/gearcat0/orbix-sdk/signature
+package signature
 
 import (
 	"encoding/hex"
-	"pro-go-sdk/pkg/xsig"
+	"github.com/gearcat0/orbix/xsig"
 )
 
 func Sign(secret string, payload map[string]interface{}) string {

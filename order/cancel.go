@@ -1,11 +1,11 @@
-package github.com/gearcat0/orbix-sdk/order
+package order
 
 import (
 	"encoding/json"
 	"fmt"
 	"gopkg.in/resty.v1"
-	"pro-go-sdk/pkg/client"
-	"pro-go-sdk/pkg/signature"
+	"github.com/gearcat0/orbix/client"
+	"github.com/gearcat0/orbix/signature"
 )
 
 type CancelRequest struct {

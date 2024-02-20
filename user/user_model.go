@@ -1,4 +1,4 @@
-package github.com/gearcat0/orbix-sdk/user
+package user
 
 type WalletCoin struct {
 	Addresses          []string `json:"addresses"`

@@ -1,11 +1,11 @@
-package github.com/gearcat0/orbix-sdk/user
+package user
 
 
 import (
 	"gopkg.in/resty.v1"
 	"fmt"
-	"pro-go-sdk/pkg/client"
-	"pro-go-sdk/pkg/signature"
+	"github.com/gearcat0/orbix/client"
+	"github.com/gearcat0/orbix/signature"
 )
 
 func Get(c client.Client) (*UserAccount, error) {
