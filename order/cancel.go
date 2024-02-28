@@ -29,16 +29,11 @@ func Cancel(c client.Client, orderID int64, pair string) error {
 	}
 
 	sig := signature.Sign(c.APISecret(), params)
-	req, err := resty.R().
+	req := resty.R().
 		SetHeader("Authorization", c.APIKey()).
 		SetHeader("Signature", sig).
 		SetHeader("Content-Type", "application/json").
 		SetBody(cancelRequest)
-
-	if err != nil {
-		fmt.Println("!!! FAILED TO MAKE REQUEST")
-		return err
-	}
 
 	resp, err := req.Delete(fmt.Sprintf("%s/orders/%d", c.URL(), orderID))
 	if err != nil {
