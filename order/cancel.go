@@ -29,11 +29,29 @@ func Cancel(c client.Client, orderID int64, pair string) error {
 	}
 
 	sig := signature.Sign(c.APISecret(), params)
-	_, err = resty.R().
+	req, err := resty.R().
 		SetHeader("Authorization", c.APIKey()).
 		SetHeader("Signature", sig).
 		SetHeader("Content-Type", "application/json").
-		SetBody(cancelRequest).
-		Delete(fmt.Sprintf("%s/orders/%d", c.URL(), orderID))
+		SetBody(cancelRequest)
+
+	if err != nil {
+		fmt.Println("!!! FAILED TO MAKE REQUEST")
+		return err
+	}
+
+	resp, err := req.Delete(fmt.Sprintf("%s/orders/%d", c.URL(), orderID))
+	if err != nil {
+		fmt.Println("!!! FAILED TO EXECUTE REQUEST")
+		return err
+	}
+
+	if resp.IsSuccess() != true {
+		fmt.Println("!!! IS SUCCESS IS FALSE")
+	}
+
+	// Does this ever return a body?
+	fmt.Printf("XXX %d: %s", resp.StatusCode(), resp.Body())
+
 	return err
 }
