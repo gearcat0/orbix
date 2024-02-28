@@ -1,15 +1,15 @@
 package user
 
 type WalletCoin struct {
-	Addresses			Addresses `json:"addresses"`
+	Addresses			[]Addresses `json:"addresses"`
 	AvailableBalance	string `json:"available_balance"`
 	TotalBalance		string `json:"total_balance"`
 }
 
 type Addresses struct {
-	Address		[]string `json:"address"`
-	Tag			[]string `json:"tag"`
-	Network		[]string `json:"network"`
+	Address		string `json:"address"`
+	Tag			string `json:"tag"`
+	Network		string `json:"network"`
 }
 
 type Wallets struct {
