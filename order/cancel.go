@@ -42,11 +42,11 @@ func Cancel(c client.Client, orderID int64, pair string) error {
 	}
 
 	if resp.IsSuccess() != true {
-		fmt.Println("!!! IS SUCCESS IS FALSE")
+		return fmt.Errorf("call returned status %d", resp.StatusCode())
 	}
 
 	// Does this ever return a body?
-	fmt.Printf("XXX %d: %s", resp.StatusCode(), resp.Body())
+	//fmt.Printf("XXX %d: %s", resp.StatusCode(), resp.Body())
 
 	return err
 }
